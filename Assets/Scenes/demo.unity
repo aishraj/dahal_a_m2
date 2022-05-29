@@ -834,9 +834,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'George P. Burdell <-- Not your name, change it!
-
-'
+  m_Text: AishRaj Dahal
 --- !u!222 &78144232
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5460,12 +5458,12 @@ PrefabInstance:
     - target: {fileID: 8420804521206458118, guid: 232cc787059764e52812f4a00462db03,
         type: 3}
       propertyPath: lastName
-      value: 
+      value: Dahal
       objectReference: {fileID: 0}
     - target: {fileID: 8420804521206458118, guid: 232cc787059764e52812f4a00462db03,
         type: 3}
       propertyPath: firstInitial
-      value: 
+      value: A
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4113589932700353090, guid: 232cc787059764e52812f4a00462db03, type: 3}
