@@ -25,6 +25,9 @@ public class RootMotionControlScript : MonoBehaviour
     public float buttonCloseEnoughForPressAngleDegrees = 5f;
     public float initalMatchTargetsAnimTime = 0.25f;
     public float exitMatchTargetsAnimTime = 0.75f;
+    public float animationSpeed = 1f;
+    public float rootMovementSpeed = 1f;
+    public float rootTurnSpeed = 1f;  
 
 
     // classic input system only polls in Update()
@@ -98,6 +101,8 @@ public class RootMotionControlScript : MonoBehaviour
             _inputActionFired = _inputActionFired || cinput.Action;
 
         }
+
+        anim.speed = animationSpeed;
     }
 
 
@@ -212,6 +217,8 @@ public class RootMotionControlScript : MonoBehaviour
         newRootRotation = anim.rootRotation;
 
         //TODO Here, you could scale the difference in position and rotation to make the character go faster or slower
+        
+        newRootPosition = Vector3.LerpUnclamped(this.transform.position, newRootPosition, rootMovementSpeed);
 
         // old way
         //this.transform.position = newRootPosition;
