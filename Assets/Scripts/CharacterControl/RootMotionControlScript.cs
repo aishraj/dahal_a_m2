@@ -147,8 +147,8 @@ public class RootMotionControlScript : MonoBehaviour
                 else
                 {
                     // TODO UNCOMMENT THESE LINES FOR TARGET MATCHING
-                    // Debug.Log("match to button initiated");
-                    // doMatchToButtonPress = true;
+                    Debug.Log("match to button initiated");
+                    doMatchToButtonPress = true;
                 }
 
             }
@@ -156,6 +156,19 @@ public class RootMotionControlScript : MonoBehaviour
 
 
         // TODO HANDLE BUTTON MATCH TARGET HERE
+        var animState = anim.GetCurrentAnimatorStateInfo(0);
+        if (animState.IsName("MatchToButtonPress") && !anim.IsInTransition(0) && !anim.isMatchingTarget)
+        {
+            if (buttonPressStandingSpot != null)
+            {
+                Debug.Log("Target matching correction started");
+                initalMatchTargetsAnimTime = animState.normalizedTime;
+                var t = buttonPressStandingSpot.transform; anim.MatchTarget(t.position, t.rotation, AvatarTarget.Root,
+                    new MatchTargetWeightMask(new Vector3(1f, 0f, 1f), 1f),
+                    initalMatchTargetsAnimTime,
+                    exitMatchTargetsAnimTime); 
+            }
+        }
 
 
 
