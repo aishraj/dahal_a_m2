@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,6 +21,7 @@ public class RootMotionControlScript : MonoBehaviour
 
 
     public GameObject buttonPressStandingSpot;
+    public GameObject buttonObject;
     public float buttonCloseEnoughForMatchDistance = 2f;
     public float buttonCloseEnoughForPressDistance = 0.22f;
     public float buttonCloseEnoughForPressAngleDegrees = 5f;
@@ -170,14 +172,34 @@ public class RootMotionControlScript : MonoBehaviour
             }
         }
 
-
-
         anim.SetFloat("velx", _inputTurn);
         anim.SetFloat("vely", _inputForward);
         anim.SetBool("isFalling", !isGrounded);
         anim.SetBool("doButtonPress", doButtonPress);
         anim.SetBool("matchToButtonPress", doMatchToButtonPress);
 
+    }
+
+    private void OnAnimatorIK(int layerIndex) {
+        if (anim) {
+            AnimatorStateInfo astate = anim.GetCurrentAnimatorStateInfo(0);
+            if (astate.IsName("ButtonPress"))
+            {
+                float buttonWeight = anim.GetFloat("buttonClose");
+                if (buttonObject != null) {
+                    anim.SetLookAtWeight(buttonWeight);
+                    anim.SetLookAtPosition(buttonObject.transform.position);
+                    anim.SetIKPositionWeight(AvatarIKGoal.RightHand, buttonWeight);
+                    anim.SetIKPosition(AvatarIKGoal.RightHand,
+                        buttonObject.transform.position);
+                }
+            } 
+            else
+            {
+                anim.SetIKPositionWeight(AvatarIKGoal.RightHand, 0);
+                anim.SetLookAtWeight(0);
+            }
+        }
     }
 
 

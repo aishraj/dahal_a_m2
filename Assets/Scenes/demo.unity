@@ -883,6 +883,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1890106453}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &91227806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8717648844397121767, guid: cad54794e0416478ebf40bab225f861e,
+    type: 3}
+  m_PrefabInstance: {fileID: 599924519}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &91582233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8773,6 +8779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonPressStandingSpot: {fileID: 0}
+  buttonObject: {fileID: 0}
   buttonCloseEnoughForMatchDistance: 2
   buttonCloseEnoughForPressDistance: 0.1
   buttonCloseEnoughForPressAngleDegrees: 5
@@ -11431,6 +11438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonPressStandingSpot: {fileID: 2145613788}
+  buttonObject: {fileID: 91227806}
   buttonCloseEnoughForMatchDistance: 2
   buttonCloseEnoughForPressDistance: 0.22
   buttonCloseEnoughForPressAngleDegrees: 5
