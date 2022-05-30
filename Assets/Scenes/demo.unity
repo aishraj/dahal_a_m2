@@ -8778,6 +8778,9 @@ MonoBehaviour:
   buttonCloseEnoughForPressAngleDegrees: 5
   initalMatchTargetsAnimTime: 0
   exitMatchTargetsAnimTime: 0
+  animationSpeed: 1
+  rootMovementSpeed: 1
+  rootTurnSpeed: 1
   jumpableGroundNormalMaxAngle: 45
   closeToJumpableGround: 0
 --- !u!114 &966225177
@@ -11433,6 +11436,9 @@ MonoBehaviour:
   buttonCloseEnoughForPressAngleDegrees: 5
   initalMatchTargetsAnimTime: 0
   exitMatchTargetsAnimTime: 0
+  animationSpeed: 1
+  rootMovementSpeed: 1
+  rootTurnSpeed: 1
   jumpableGroundNormalMaxAngle: 45
   closeToJumpableGround: 1
 --- !u!136 &1331787735
@@ -14078,6 +14084,7 @@ GameObject:
   - component: {fileID: 1596431979}
   - component: {fileID: 1596431981}
   - component: {fileID: 1596431982}
+  - component: {fileID: 1596431985}
   m_Layer: 14
   m_Name: Minion_RootMotion
   m_TagString: Untagged
@@ -14178,6 +14185,18 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1596431985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596431978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17f5dda01680a44258800d96bdee730a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1596431987
 Transform:
   m_ObjectHideFlags: 0
