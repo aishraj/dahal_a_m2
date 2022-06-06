@@ -1,4 +1,4 @@
-## Milestone 1
+## Milestone 2
 
 Submitted by: Aish Raj Dahal
 Email: aishraj@gatech.edu
