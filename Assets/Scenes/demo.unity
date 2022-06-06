@@ -6333,6 +6333,11 @@ PrefabInstance:
       propertyPath: firstInitial
       value: A
       objectReference: {fileID: 0}
+    - target: {fileID: 8420804521206458118, guid: 232cc787059764e52812f4a00462db03,
+        type: 3}
+      propertyPath: assignmentCode
+      value: m2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4113589932700353090, guid: 232cc787059764e52812f4a00462db03, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 232cc787059764e52812f4a00462db03, type: 3}
